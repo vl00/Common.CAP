@@ -52,7 +52,6 @@ void ConfigureServices(IServiceCollection services, IConfiguration config)
     services.AddHttpContextAccessor();
 
     services.AddControllersWithViews()
-        //.AddJsonOptions(opts => { }) // utf8-json
         .AddNewtonsoftJson(opts => 
         {
             opts.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
