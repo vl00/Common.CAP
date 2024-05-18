@@ -20,7 +20,7 @@
    //[Middler1(Order = 100)]
    public class Class1 : BaseExecCap, ICapSubscribe
    {
-   	 [Middler1]
+       [Middler1]
        public Task Method() { ... }
    }
    
