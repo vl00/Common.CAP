@@ -35,3 +35,6 @@
 3. cd Sample1 && dotnet build
 4. 运行本库 ./rg.cap.bat 生成
 5. cd Sample1 && dotnet run
+
+See more: 
+[Common.CAP 实现分布式saga(事务)流程](./Sample2/README.md)
