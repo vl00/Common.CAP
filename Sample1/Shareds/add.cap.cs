@@ -19,11 +19,14 @@ internal static partial class ProgramUtils
                 x.JsonSerializerOptions.UnknownTypeHandling = System.Text.Json.Serialization.JsonUnknownTypeHandling.JsonElement;
             }
 
-            x.UseMySql(m =>
-            {
-                m.ConnectionString = configuration["cap:mysql:conn"];
-                m.ConnectionString = string.IsNullOrEmpty(m.ConnectionString) ? configuration[configuration["cap:mysql:ref-conn"]] : m.ConnectionString;
-            });
+            x.UseInMemoryStorage();
+
+            //x.UseMySql(m =>
+            //{
+            //    m.ConnectionString = configuration["cap:mysql:conn"];
+            //    m.ConnectionString = string.IsNullOrEmpty(m.ConnectionString) ? configuration[configuration["cap:mysql:ref-conn"]] : m.ConnectionString;
+            //});
+
             x.UseRabbitMQ(z =>
             {
                 configuration.BindObj("cap:rabbitmq", z, (config, _) =>
@@ -31,6 +34,7 @@ internal static partial class ProgramUtils
                     z.BasicQosOptions = new RabbitMQOptions.BasicQos(ushort.Parse(config["use-qos"]), false);
                 });
             });
+
             x.FailedThresholdCallback = failed =>
             {
                 var logger = failed.ServiceProvider.GetService<ILoggerFactory>().CreateLogger("app");
