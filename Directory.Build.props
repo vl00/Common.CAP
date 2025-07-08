@@ -2,7 +2,7 @@
   <Import Condition=" Exists('$(MSBuildProjectDirectory)/obj/rg.proj/InterceptorsPreviewNamespaces.xml') " Project="$(MSBuildProjectDirectory)/obj/rg.proj/InterceptorsPreviewNamespaces.xml" />
 
   <PropertyGroup>
-    <v__netcoreapp>net8.0</v__netcoreapp>
+    <v__netcoreapp>net9.0</v__netcoreapp>
     <v__netstandard>netstandard2.1</v__netstandard>
     <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
   </PropertyGroup>

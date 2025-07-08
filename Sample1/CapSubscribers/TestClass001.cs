@@ -1,4 +1,4 @@
-﻿using Common.CAP;
+using Common.CAP;
 using DotNetCore.CAP;
 using System.Diagnostics;
 using WebAppl2.Middlers;
@@ -11,7 +11,7 @@ namespace WebAppl2.CapSubscribers;
 public partial class TestClass001(ILogger<TestClass001> log)
     : BaseExecCap
 {
-    const string FlowName = "test1";
+    const string FlowName = "group.test2.test1";
 
     [Middler1]             
     [CapSubscribe("a", true)]  

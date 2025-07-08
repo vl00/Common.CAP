@@ -59,7 +59,7 @@ void ConfigureServices(IServiceCollection services, IConfiguration config)
         })
         ; //
 
-    services.AddSwaggerEx(typeof(TestController), "Server2", "v1");
+    services.AddSwaggerEx(typeof(TestController), "Sample1", "v1");
 
     // cap
     ProgramUtils.AddCap(services, config);
@@ -87,7 +87,7 @@ void ConfigureAppUse(WebApplication app)
 
     app.MapGet("/", () => "Hello World");
 
-    app.UseSwaggerEx("Server2", "v1");
+    app.UseSwaggerEx("Sample1", "v1");
 
     app.MapControllerRoute(
         name: "Area",

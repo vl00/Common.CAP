@@ -1,6 +1,4 @@
-﻿//! rg时需要显式指定全局using
-
-// 自定义
+﻿// 自定义
 global using global::Common;
 global using global::rg;
 global using global::System.Buffers;
