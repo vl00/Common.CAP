@@ -37,4 +37,6 @@
 5. cd Sample1 && dotnet run
 
 See more: 
-[Common.CAP 实现分布式saga(事务)流程](./Sample2/README.md)
+- [实现简单的状态和结果保存](./Sample3/README.md)
+- [Common.CAP 实现分布式saga(事务)流程](./Sample2/README.md)
+
