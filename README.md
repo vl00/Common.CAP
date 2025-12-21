@@ -2,7 +2,7 @@
 
 [![NuGet](https://img.shields.io/nuget/v/Common.CAP.svg?style=flat)](https://www.nuget.org/packages/Common.CAP#versions-body-tab)
 
-目前dotnetcore.cap7,8 消费者过滤器只能单个并不支持中间件的，这里提供一种支持中间件的实现方法...
+目前dotnetcore.cap7,8,10 消费者过滤器只能单个并不支持中间件的，这里提供一种支持中间件的实现方法...
 
 1. 先引用包 Common.CAP 到你项目
 2. 编写中间件和全局注册
@@ -16,11 +16,11 @@
        }
    }
    
-   // 使用:
+   // 局部使用:
    //[Middler1(Order = 100)]
    public class Class1 : BaseExecCap, ICapSubscribe
    {
-       [Middler1]
+       [Middler1] // 局部使用
        public Task Method() { ... }
    }
    

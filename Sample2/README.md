@@ -9,7 +9,7 @@
 ![](../media/s-pub.png)
 
 * 启动
-![](../media/sample_for_dotnet8_aop_and_rg.png)
+![](../media/sample_for_dotnet10_aop_and_rg.2.jpg)
 
 * 单独某个节点
 

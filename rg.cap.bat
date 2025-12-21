@@ -9,6 +9,6 @@ rmdir /s/q "%cd0%/Sample1/obj/rg/cap" 1>nul 2>nul
 copy /y rg.info.json "../rg/cap/rg.info.json"
 cd ../rg/cap
 del log.*.log 1>nul 2>nul 
-rg
+rg --interceptslocation-attr-version 1
 :end
 cd %cd0%
